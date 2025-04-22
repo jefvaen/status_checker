@@ -4,9 +4,10 @@ from bs4 import BeautifulSoup
 
 in_stock_webhook = os.getenv("in_stock_webhook") 
 logging_webhook  = os.getenv("logging_webhook")  
+product_to_check = os.getenv("product_to_check")
 
 aa_url = 'https://aa-drink.com/shop/cycling'
-product_to_check = 'Massage gun'
+
 
 
 def check_stock_status(product_to_check):
