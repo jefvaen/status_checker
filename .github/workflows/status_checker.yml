@@ -25,4 +25,4 @@ jobs:
         env:
           in_stock_webhook: ${{ secrets.in_stock_webhook }}
           logging_webhook: ${{ secrets.logging_webhook }}
-        run: python random_strava.py
+        run: python aa.py
