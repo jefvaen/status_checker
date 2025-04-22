@@ -2,9 +2,9 @@ import requests, os
 from bs4 import BeautifulSoup
 
 
-in_stock_webhook = os.getenv("in_stock_webhook") 
-logging_webhook  = os.getenv("logging_webhook")  
-product_to_check = os.getenv("product_to_check")
+in_stock_webhook = os.getenv("IN_STOCK_WEBHOOK") 
+logging_webhook  = os.getenv("LOGGING_WEBHOOK")  
+product_to_check = os.getenv("PRODUCT_TO_CHECK")
 
 aa_url = 'https://aa-drink.com/shop/cycling'
 
