@@ -2,7 +2,7 @@ name: check the aa website
 
 on:
   schedule:
-    - cron: "0 8,16, * * *" 
+    - cron: "0 * * * *"  # Every hour on the hour
   workflow_dispatch:  # Allows manual execution
 
 jobs:
