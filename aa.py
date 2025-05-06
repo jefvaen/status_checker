@@ -8,8 +8,6 @@ product_to_check = os.getenv("PRODUCT_TO_CHECK")
 
 aa_url = 'https://aa-drink.com/shop/cycling'
 
-
-
 def check_stock_status(product_to_check):
 
     headers = {
@@ -25,10 +23,10 @@ def check_stock_status(product_to_check):
     soup = BeautifulSoup(response.text, 'html.parser')
 
     # Search all product blocks
-    products = soup.find_all(class_='bwx-card')
+    products = soup.find_all(class_='m-b-lg m-x-md')
+
     for product in products:
         title_tag = product.find('h3')
-
         if title_tag and product_to_check.lower() in title_tag.get_text(strip=True).lower():
             stock_warning = product.find(class_='stock-warning bwx-text-primary')
             if stock_warning:
