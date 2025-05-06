@@ -1,8 +1,8 @@
-name: check the aa website
+#name: check the aa website
 
 on:
   schedule:
-    - cron: "*/30 * * * *"  # Every half hour on the hour
+    - cron: "0 * * * *"
   workflow_dispatch:  # Allows manual execution
 
 jobs:
@@ -23,6 +23,8 @@ jobs:
 
       - name: Run Python Script
         env:
-          in_stock_webhook: ${{ secrets.in_stock_webhook }}
-          logging_webhook: ${{ secrets.logging_webhook }}
+          IN_STOCK_WEBHOOK: ${{ secrets.IN_STOCK_WEBHOOK }}
+          LOGGING_WEBHOOK: ${{ secrets.LOGGING_WEBHOOK }}
+          PRODUCT_TO_CHECK:  ${{ vars.PRODUCT_TO_CHECK }}
+          
         run: python aa.py
